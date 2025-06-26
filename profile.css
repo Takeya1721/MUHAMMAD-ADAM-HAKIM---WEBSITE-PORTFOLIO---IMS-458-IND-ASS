@@ -1,0 +1,392 @@
+/* Basic Setup & Color Palette */
+:root {
+    --navy-blue: #000080;
+    --silver-blue: #A4B8D3; 
+    --light-grey: #f0f2f5; 
+    --white: #FFFFFF;
+    --text-color: #333333;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--light-grey); 
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    line-height: 1.6;
+}
+
+/* Main Wrapper */
+.wrapper {
+    width: 100%;
+    max-width: 1100px;
+    border: 1px solid #e0e0e0; 
+    padding: 2rem;
+    background-color: var(--white); 
+    border-radius: 8px; 
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); 
+}
+
+/* Header & Navigation */
+header {
+    text-align: center;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #e0e0e0; 
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-family: "Times New Roman", serif; 
+    color: var(--navy-blue);
+    font-weight: bold;
+}
+
+nav {
+    padding: 1rem 0;
+    margin-bottom: 2rem;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; 
+    gap: 2.5rem;
+}
+
+nav a {
+    color: var(--navy-blue);
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 0.25rem 0;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--silver-blue);
+}
+
+/* Style for the active navigation link */
+nav a.active {
+    color: var(--silver-blue);
+    border-bottom: 2px solid var(--silver-blue);
+}
+
+
+/* Profile Page Layout */
+.content-container.profile-layout {
+    display: flex;
+    gap: 2rem;
+}
+
+.profile-layout .left-column {
+    flex: 0 0 180px;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-area {
+    flex: 0 0 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo img {
+    max-width: 100%;
+    max-height: 100%; 
+    height: auto; 
+}
+
+.logo-area .logo img {
+border: 1px solid black; 
+}
+
+.sidebar {
+    border: 2px solid #e0e0e0;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.sidebar h3 {
+    color: var(--navy-blue);
+    font-family: "Times New Roman", serif;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li a {
+    display: block;
+    padding: 0.5rem;
+    text-decoration: none;
+    color: var(--text-color);
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar ul li a:hover {
+    background-color: var(--light-grey);
+    color: var(--navy-blue);
+}
+
+
+/* Main Content Styling */
+.profile-layout .main-content {
+    flex: 1; 
+}
+
+.main-content .profile-section {
+    margin-bottom: 1.5rem;
+}
+
+.main-content h2 {
+    font-size: 1.2rem;
+    font-family: "Times New Roman", serif; 
+    color: var(--navy-blue);
+    margin-bottom: 0.25rem;
+}
+
+.main-content p {
+    font-size: 1.1rem;
+    text-align: justify
+}
+
+.main-content .profile-section ul {
+    list-style: none;
+    padding-left: 1rem;
+    font-family: "Times New Roman", serif;
+    font-size: 1.1rem;
+}
+.main-content .profile-section ul li{
+    margin-top: 0.5rem;
+}
+
+/* Footer */
+footer {
+    border-top: 1px solid #e0e0e0;
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #888;
+}
+
+.profile-grid-container {
+    display: flex;
+    gap: 1.5rem;
+}
+
+/* styling for About Me and Details box */
+.about-me-box,
+.details-box {
+    flex: 1; 
+    background-color: #fafafa;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-me-box:hover,
+.details-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.about-me-box h3, .details-box h3 {
+    color: var(--navy-blue);
+    font-family: "Times New Roman", serif;
+    margin-bottom: 1rem;
+    text-align: center;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 0.5rem;
+}
+
+.about-me-box h4 {
+    margin-top: 1.5rem;
+    color: var(--navy-blue);
+}
+
+.about-me-box ul {
+    list-style-position: inside;
+    padding-left: 0;
+}
+
+.details-box {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+}
+
+.profile-image {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 1.5rem;
+}
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%; 
+    object-fit: cover; 
+    border: 3px solid var(--white);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.profile-text ul {
+    list-style: none;
+    padding: 0;
+}
+
+.profile-text ul li {
+    margin-bottom: 0.75rem;
+}
+
+.logo a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.logo a img {
+    border: none;
+}
+
+.resume-button-container {
+    text-align: center; 
+    margin-top: 2.5rem; 
+    padding-top: 2.5rem; 
+    border-top: 1px solid #e0e0e0;
+}
+
+.resume-button {
+    display: inline-block; 
+    text-decoration: none; 
+    color: var(--white); 
+    background-color: var(--navy-blue);
+    padding: 12px 30px; 
+    border-radius: 8px; 
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: all 0.3s ease; 
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.resume-button:hover {
+    background-color: #0000a0; 
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.philosophy-content {
+    max-width: 800px;
+    margin: 2rem auto; 
+    text-align: center;
+}
+
+.philosophy-content p {
+    font-family: "Times New Roman", serif;
+    font-size: 1.3rem;
+    line-height: 1.8;
+    font-style: italic;
+    color: #333;
+}
+
+.back-to-profile-button {
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 10px 20px;
+    background-color: var(--navy-blue);
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.back-to-profile-button:hover {
+    background-color: #0000a0;
+}
+
+.video-container {
+    text-align: center;
+    margin-top: 2.5rem;
+    padding-top: 2.5rem;
+    border-top: 1px solid #e0e0e0; 
+}
+
+.video-container h3 {
+    color: var(--navy-blue);
+    font-family: "Times New Roman", serif;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.video-container video {
+    max-width: 40%; 
+    height: auto;
+    border-radius: 8px; 
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+
+@media (max-width: 900px) {
+    .profile-grid-container {
+        flex-direction: column; 
+    }
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        padding: 0; 
+    }
+    .wrapper {
+        padding: 1.5rem 1rem;
+        border: none;
+        border-radius: 0;
+        box-shadow: none;
+    }
+    .content-container {
+        flex-direction: column; 
+        align-items: center; 
+        text-align: center;
+    }
+    .profile-layout .left-column {
+       width: 100%;
+       flex-basis: auto;
+    }
+    nav ul {
+        gap: 1.5rem;
+    }
+    .main-content h2 {
+        font-size: 1.3rem;
+    }
+    .main-content p {
+        text-align: center;
+        padding-left: 0;
+    }
+    .main-content .profile-section ul {
+        padding-left: 0;
+        list-style: none;
+        text-align: center;
+    }
+}

@@ -1,0 +1,245 @@
+:root {
+    --navy-blue: #000080;
+    --silver-blue: #A4B8D3; 
+    --light-grey: #f0f2f5; 
+    --white: #FFFFFF;
+    --text-color: #333333;
+    --teal-accent: #000000; 
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--light-grey); 
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    line-height: 1.6;
+}
+
+/* Main Wrapper */
+.wrapper {
+    width: 100%;
+    max-width: 1100px;
+    background-color: var(--white); 
+    border-radius: 8px; 
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1); 
+    overflow: hidden; 
+}
+
+/* Header & Navigation */
+header, nav {
+    padding: 1.5rem 2rem;
+}
+
+header {
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-family: "Times New Roman", serif; 
+    color: var(--navy-blue);
+    font-weight: bold;
+}
+
+nav {
+    border-top: 1px solid #e0e0e0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; 
+    gap: 2.5rem;
+}
+
+nav a {
+    color: var(--navy-blue);
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 0.25rem 0;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--silver-blue);
+}
+
+nav a.active {
+    color: var(--silver-blue);
+    border-bottom: 2px solid var(--silver-blue);
+}
+
+.homepage-main {
+    padding: 2rem;
+}
+
+.homepage-logo {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.homepage-logo img {
+    max-width: 150px; 
+    height: auto;
+}
+
+.welcome-section {
+    text-align: center;
+    padding: 1rem 1rem 2rem 1rem;
+}
+
+.welcome-section h2 {
+    font-size: 2.8rem;
+    color: var(--teal-accent);
+    margin-bottom: 0.5rem;
+}
+
+.welcome-section p {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+.homepage-boxes {
+    display: flex;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.info-box {
+    flex: 1; 
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-top: 5px solid var(--teal-accent); 
+    border-radius: 8px;
+    padding: 2rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+}
+
+.icon-container {
+    font-size: 2.5rem;
+    color: var(--teal-accent);
+    margin-bottom: 1rem;
+}
+
+.info-box h3 {
+    font-family: "Times New Roman", serif;
+    font-size: 1.5rem;
+    color: var(--navy-blue);
+    text-transform: capitalize; 
+    margin-bottom: 1rem;
+}
+
+.info-box p {
+    flex-grow: 1; 
+    color: #555;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.box-link {
+    text-decoration: none;
+    color: var(--teal-accent);
+    font-weight: bold;
+}
+
+.box-link:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    padding: 1.5rem;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #888;
+    background-color: #f8f9fa; 
+}
+
+.homepage-logo img {
+    border: 2px solid black; 
+    padding: 5px; 
+    background-color: white; 
+}
+
+/* Achievements Section Styling */
+
+.achievements-section {
+    background-color: #f2f2ff; 
+    padding: 3rem 2rem;
+    margin: 3rem -2rem -1.5rem -2rem; 
+    text-align: center;
+}
+
+.achievements-section h2 {
+    font-size: 2rem;
+    color: var(--navy-blue);
+    font-family: "Times New Roman", serif;
+    margin-bottom: 2rem;
+}
+
+.achievements-container {
+    max-width: 900px;
+    margin: 0 auto; 
+}
+
+.achievement-box {
+    background-color: var(--white);
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1.5rem 2rem;
+    margin-bottom: 1.5rem;
+    text-align: left;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.achievement-box h3 {
+    font-size: 1.3rem;
+    color: #3b5998; 
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #eee;
+}
+
+.achievement-list {
+    list-style: none;
+    padding: 0;
+}
+
+.achievement-list li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 0.75rem;
+    color: var(--text-color);
+}
+
+.achievement-list .fa-star {
+    color: #ffc107; 
+    margin-right: 0.75rem;
+    margin-top: 5px; 
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .homepage-boxes {
+        flex-direction: column; 
+    }
+}
